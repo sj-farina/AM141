@@ -1,0 +1,307 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10961,        299]
+NotebookOptionsPosition[     10269,        272]
+NotebookOutlinePosition[     10609,        287]
+CellTagsIndexPosition[     10566,        284]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"num", " ", "=", " ", "0"}], ",", " ", 
+   RowBox[{"num", "\[LessEqual]", " ", "60"}], ",", " ", 
+   RowBox[{"num", " ", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"expo", " ", "=", " ", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "num"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"sorted", " ", "=", " ", 
+     RowBox[{"SortBy", "[", 
+      RowBox[{"expo", ",", " ", 
+       RowBox[{
+        RowBox[{"N", "@", 
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{"#", "*", 
+            RowBox[{"Log", "[", 
+             RowBox[{"2", ",", 
+              RowBox[{"3", "/", "2"}]}], "]"}]}], ",", "1"}], "]"}]}], 
+        "&"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"diff", " ", "=", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"RotateLeft", "[", "sorted", "]"}], "-", "sorted"}], ")"}]}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"counts", " ", "=", " ", 
+     RowBox[{"Counts", "[", "diff", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"position", " ", "=", " ", 
+     RowBox[{"Ordering", "[", "sorted", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"lengths", " ", "=", " ", 
+     RowBox[{"RotateLeft", "[", 
+      RowBox[{"position", " ", "-", " ", 
+       RowBox[{"RotateRight", "[", "position", "]"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"modded", " ", "=", " ", 
+     RowBox[{"Mod", "[", 
+      RowBox[{"lengths", ",", " ", 
+       RowBox[{"num", "+", "1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"union", " ", "=", " ", 
+     RowBox[{"Union", "[", "modded", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"unique", " ", "=", " ", 
+     RowBox[{"Length", "[", "union", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"unique", " ", "==", " ", "1"}], ",", " ", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Print", "[", " ", 
+        RowBox[{"\"\< circle \>\"", ",", 
+         RowBox[{"num", " ", "+", " ", "1"}], ",", "\"\<, steps = \>\"", ",", 
+         " ", "union", ",", " ", "\"\<, thing = \>\"", ",", " ", 
+         RowBox[{"num", "+", "1", "+", "union"}], ",", " ", 
+         "\"\<counts = \>\"", ",", " ", "counts"}], "]"}], ";"}], 
+      "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+      RowBox[{"Null", ";"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "0", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "1", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{"0", "\[Rule]", "1"}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 1, ", steps = ", {0}, ", thing = ", {1}, "counts = ", 
+   Association[0 -> 1]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951025775*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "1", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "3", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"1", "\[Rule]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"-", "1"}], "\[Rule]", "1"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 2, ", steps = ", {1}, ", thing = ", {3}, "counts = ", 
+   Association[1 -> 1, -1 -> 1]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951026662*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "2", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "5", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"2", "\[Rule]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"-", "1"}], "\[Rule]", "2"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 3, ", steps = ", {2}, ", thing = ", {5}, "counts = ", 
+   Association[2 -> 1, -1 -> 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951027869*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "3", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "8", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"2", "\[Rule]", "3"}], ",", 
+     RowBox[{
+      RowBox[{"-", "3"}], "\[Rule]", "2"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 5, ", steps = ", {3}, ", thing = ", {8}, "counts = ", 
+   Association[2 -> 3, -3 -> 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951028942*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "4", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "11", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"2", "\[Rule]", "5"}], ",", 
+     RowBox[{
+      RowBox[{"-", "5"}], "\[Rule]", "2"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 7, ", steps = ", {4}, ", thing = ", {11}, "counts = ", 
+   Association[2 -> 5, -5 -> 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951030011*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "12", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "7", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "19", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"7", "\[Rule]", "5"}], ",", 
+     RowBox[{
+      RowBox[{"-", "5"}], "\[Rule]", "7"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 12, ", steps = ", {7}, ", thing = ", {19}, "counts = ", 
+   Association[7 -> 5, -5 -> 7]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951031103*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "17", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "10", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "27", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"12", "\[Rule]", "5"}], ",", 
+     RowBox[{
+      RowBox[{"-", "5"}], "\[Rule]", "12"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 17, ", steps = ", {10}, ", thing = ", {27}, "counts = ", 
+   Association[12 -> 5, -5 -> 12]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951032178*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "29", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "17", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "46", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"12", "\[Rule]", "17"}], ",", 
+     RowBox[{
+      RowBox[{"-", "17"}], "\[Rule]", "12"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 29, ", steps = ", {17}, ", thing = ", {46}, "counts = ", 
+   Association[12 -> 17, -17 -> 12]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.697901951033169*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "41", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "24", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "65", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"12", "\[Rule]", "29"}], ",", 
+     RowBox[{
+      RowBox[{"-", "29"}], "\[Rule]", "12"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 41, ", steps = ", {24}, ", thing = ", {65}, "counts = ", 
+   Association[12 -> 29, -29 -> 12]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6979019510530863`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" circle \"\>", "\[InvisibleSpace]", "53", 
+   "\[InvisibleSpace]", "\<\", steps = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "31", "}"}], "\[InvisibleSpace]", "\<\", thing = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", "84", "}"}], "\[InvisibleSpace]", "\<\"counts = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"12", "\[Rule]", "41"}], ",", 
+     RowBox[{
+      RowBox[{"-", "41"}], "\[Rule]", "12"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  " circle ", 53, ", steps = ", {31}, ", thing = ", {84}, "counts = ", 
+   Association[12 -> 41, -41 -> 12]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6979019510542316`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1058, 621},
+WindowMargins->{{Automatic, 101}, {7, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2456, 57, 377, "Input"],
+Cell[CellGroupData[{
+Cell[3061, 83, 629, 14, 26, "Print"],
+Cell[3693, 99, 718, 17, 26, "Print"],
+Cell[4414, 118, 718, 17, 26, "Print"],
+Cell[5135, 137, 718, 17, 26, "Print"],
+Cell[5856, 156, 720, 17, 26, "Print"],
+Cell[6579, 175, 722, 17, 26, "Print"],
+Cell[7304, 194, 728, 17, 26, "Print"],
+Cell[8035, 213, 732, 17, 26, "Print"],
+Cell[8770, 232, 734, 17, 26, "Print"],
+Cell[9507, 251, 734, 17, 26, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

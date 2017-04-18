@@ -1,0 +1,69 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1637,         61]
+NotebookOptionsPosition[      1329,         45]
+NotebookOutlinePosition[      1669,         60]
+CellTagsIndexPosition[      1626,         57]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"convertVect2Freq", "[", 
+     RowBox[{"vect1_", ",", " ", "vect2_"}], "]"}], " ", ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"2", "^", 
+      RowBox[{"(", "vect1", ")"}]}], " ", "*", " ", 
+     RowBox[{"3", "^", 
+      RowBox[{"(", "vect2", ")"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"convertVect2Freq", "[", 
+  RowBox[{"7", ",", "1"}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.699883974973695*^9, 3.699883994463851*^9}, {
+  3.699884045093005*^9, 3.699884186241579*^9}}],
+
+Cell[BoxData["384"], "Output",
+ CellChangeTimes->{{3.699884167015312*^9, 3.69988418731632*^9}, 
+   3.700315661940938*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{222, Automatic}, {18, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 609, 16, 124, "Input"],
+Cell[1192, 40, 121, 2, 65, "Output"]
+}, Open  ]]
+}
+]
+*)
+

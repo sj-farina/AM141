@@ -1,0 +1,91 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2278,         83]
+NotebookOptionsPosition[      1969,         67]
+NotebookOutlinePosition[      2309,         82]
+CellTagsIndexPosition[      2266,         79]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"e", "*", "b"}], "-", 
+       RowBox[{"a", "*", "f"}]}], "\[Equal]", " ", "1"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"g", "*", "f"}], "-", 
+       RowBox[{"e", "*", "d"}]}], "\[Equal]", "1"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"e", ",", "f"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.697899893338173*^9, 3.6978999060607557`*^9}, {
+  3.697899983033969*^9, 3.697899986559079*^9}, {3.6979000222352867`*^9, 
+  3.697900079354698*^9}, {3.697900129904017*^9, 3.697900137739732*^9}, {
+  3.697900272869853*^9, 3.697900273647778*^9}, {3.697900406792564*^9, 
+  3.697900406948532*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"e", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"a", "+", "g"}], 
+       RowBox[{
+        RowBox[{"a", " ", "d"}], "-", 
+        RowBox[{"b", " ", "g"}]}]]}]}], ",", 
+    RowBox[{"f", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "b"}], "-", "d"}], 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "a"}], " ", "d"}], "+", 
+        RowBox[{"b", " ", "g"}]}]]}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.697900083503414*^9, 3.697900138611127*^9, 
+  3.69790027444613*^9, 3.69790040778091*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{222, Automatic}, {46, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 733, 19, 34, "Input"],
+Cell[1316, 43, 637, 21, 110, "Output"]
+}, Open  ]]
+}
+]
+*)
+

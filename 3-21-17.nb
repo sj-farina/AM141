@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5582,        159]
+NotebookOptionsPosition[      5235,        142]
+NotebookOutlinePosition[      5573,        157]
+CellTagsIndexPosition[      5530,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"convertNote2Num", "[", "l_", "]"}], " ", ":=", " ", 
+  RowBox[{"l", "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"A", "\[Rule]", " ", 
+      RowBox[{"-", "3"}]}], ",", " ", 
+     RowBox[{"B", "\[Rule]", 
+      RowBox[{"-", "2"}]}], ",", " ", 
+     RowBox[{"C", "\[Rule]", " ", 
+      RowBox[{"-", "1"}]}], ",", " ", 
+     RowBox[{"D", " ", "\[Rule]", " ", "0"}], ",", " ", 
+     RowBox[{"E", " ", "\[Rule]", " ", "1"}], ",", " ", 
+     RowBox[{"F", "\[Rule]", " ", "2"}], ",", " ", 
+     RowBox[{"G", "\[Rule]", "3"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertNoteOct2Num", "[", 
+    RowBox[{"l_", ",", "n_"}], "]"}], " ", ":=", " ", 
+   RowBox[{"l", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"A", "\[Rule]", " ", 
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"B", "\[Rule]", 
+       RowBox[{
+        RowBox[{"-", "2"}], "+", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"C", "\[Rule]", " ", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"D", " ", "\[Rule]", " ", 
+       RowBox[{"0", "+", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"E", " ", "\[Rule]", " ", 
+       RowBox[{"1", "+", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"F", "\[Rule]", " ", 
+       RowBox[{"2", "+", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "7"}], ")"}]}]}], ",", " ", 
+      RowBox[{"G", "\[Rule]", 
+       RowBox[{"3", "+", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "7"}], ")"}]}]}]}], "}"}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertNumtoNote", "[", "l_", "]"}], " ", ":=", " ", 
+   RowBox[{"l", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "3"}], "\[Rule]", " ", "A"}], ",", " ", 
+      RowBox[{
+       RowBox[{"-", "2"}], "\[Rule]", "B"}], ",", " ", 
+      RowBox[{
+       RowBox[{"-", "1"}], "\[Rule]", " ", "C"}], ",", " ", 
+      RowBox[{"0", " ", "\[Rule]", " ", "D"}], ",", " ", 
+      RowBox[{"1", "\[Rule]", " ", "E"}], ",", " ", 
+      RowBox[{"2", "\[Rule]", " ", "F"}], ",", " ", 
+      RowBox[{"3", "\[Rule]", "G"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"convertNum2NoteOct", "[", "s_", "]"}], " ", ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{"oct", " ", "=", " ", 
+     RowBox[{"Round", "[", 
+      RowBox[{"s", "/", "7"}], "]"}]}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"note", " ", "=", " ", "5"}], ";"}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertModeAcc2Mod", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mode_", ",", " ", "acc_"}], "}"}], ",", "\[IndentingNewLine]", 
+     
+     RowBox[{
+      RowBox[{"acc", " ", ";"}], "\[IndentingNewLine]", ";"}]}], 
+    "\[IndentingNewLine]", "]"}], " ", ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.699107258613387*^9, 3.69910739289922*^9}, {
+  3.699107456862671*^9, 3.699107475793153*^9}, {3.699107522753854*^9, 
+  3.6991075795824833`*^9}, {3.6991076322425423`*^9, 3.699107905485174*^9}, {
+  3.699108001682313*^9, 3.6991082060146093`*^9}, {3.699108241324785*^9, 
+  3.6991082779710712`*^9}, {3.699108337077778*^9, 3.699108432336022*^9}, {
+  3.699108553226931*^9, 3.699108778036846*^9}, {3.699109564425981*^9, 
+  3.69910959153006*^9}, {3.6991096426463747`*^9, 3.699109645927183*^9}, {
+  3.699109942179831*^9, 3.699109969526113*^9}, {3.699281779548511*^9, 
+  3.699281863612431*^9}, {3.6992819199883347`*^9, 3.699281981840542*^9}, {
+  3.699282080054781*^9, 3.69928209251303*^9}, {3.699711220792589*^9, 
+  3.6997112850910587`*^9}, {3.699712179388466*^9, 3.6997122695641117`*^9}, {
+  3.6997124962529783`*^9, 3.6997126010800667`*^9}, {3.6997126996339073`*^9, 
+  3.699712735081584*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"convertLetterNum2ModeNum", "[", "3", "]"}]], "Input",
+ CellChangeTimes->{{3.699712606348654*^9, 3.699712631131675*^9}}],
+
+Cell[BoxData[
+ RowBox[{"convertLetterNum2ModeNum", "[", "3", "]"}]], "Output",
+ CellChangeTimes->{3.699712632471942*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{Automatic, 0}, {20, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4370, 109, 572, "Input"],
+Cell[CellGroupData[{
+Cell[4953, 133, 143, 2, 32, "Input"],
+Cell[5099, 137, 120, 2, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+

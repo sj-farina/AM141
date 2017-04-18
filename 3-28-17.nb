@@ -1,0 +1,82 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1991,         74]
+NotebookOptionsPosition[      1649,         57]
+NotebookOutlinePosition[      1987,         72]
+CellTagsIndexPosition[      1944,         69]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"convertLetterNum2ModeNum", "[", "n_", "]"}], " ", ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Mod", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "*", " ", "n"}], ")"}], ",", "7", ",", 
+      RowBox[{"-", "3"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"convertModeNum2LetterNum", "[", "n_", "]"}], " ", ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Mod", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"4", "*", " ", "n"}], ")"}], ",", "7", ",", 
+      RowBox[{"-", "3"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"convertLetterNum2ModeNum", "[", "3", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"convertModeNum2LetterNum", "[", "2", "]"}]}], "Input",
+ CellChangeTimes->{3.699712705922689*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", "1"}]], "Output",
+ CellChangeTimes->{3.69971270684643*^9}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.699712706848453*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{0, Automatic}, {Automatic, 56}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 891, 25, 191, "Input"],
+Cell[1474, 49, 86, 2, 32, "Output"],
+Cell[1563, 53, 70, 1, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
